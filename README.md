@@ -3,6 +3,7 @@
 * A Wi-Fi connection and enabling Javascript in the browser is required to get the best experience from the web application. 
 * The application is currently deployed and can be found through this link: https://safespace-ph.herokuapp.com/
 * Instructions to run the web application locally can be found below. 
+* Original repository [link](https://github.com/DLSU-CCAPDEV/2021T2-G30).
 
 ## Contributors
 - [Buensalida, Matthew C.](https://github.com/matthews-code)
