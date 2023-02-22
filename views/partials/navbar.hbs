@@ -1,0 +1,71 @@
+<!-- Nav Bar -->
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark navcolor">
+    <div class="container-fluid">
+        <!-- Logo  -->
+        <a class="navbar-brand" style="font-weight: 100" onclick="location.href='/mainpage'">
+        Safe Space
+        </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navs -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Search -->
+        <form class="d-flex me-auto" action="/searchresults" method="GET" id="searchForm">
+            <div class="input-group mb-2 mt-2">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="SearchTitle" id="SearchTitle"/>
+            <button class="btn btn-outline-light" name="searchbtn" type="button" id="searchbtn">
+                Search
+            </button>
+            </div>
+        </form>
+        <ul class="navbar-nav text-center ms-auto mb-3 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/mainpage">
+                Home
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/profile/{{sessionUser}}">Profile</a>
+            </li>
+            {{!-- <li class="nav-item">
+            <a class="nav-link" href="notifications.html">Notifications</a>
+            </li> --}}
+
+            <!-- Dropdown Web App Settings -->
+            <li class="nav-item dropdown">
+            <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+            >
+                <i class="fas fa-user-cog"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li>
+                <a class="dropdown-item" onclick="location.href='/settings'">Settings</a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                <a class="dropdown-item" href="/logout">Log-out</a>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+</header>

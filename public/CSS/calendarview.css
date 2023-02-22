@@ -1,0 +1,75 @@
+.custom-section {
+  min-height: calc(100vh - 74px);
+}
+
+.container {
+  background-color: white;
+  border-radius: 15px;
+}
+
+.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.card {
+  height: 138px;
+}
+
+.card {
+  transition: 0.2s;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transition: 0.2s;
+  box-shadow: inset 0 0px 0px white, 0 0 4px #163172;
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+/* FullCalendar library edits */
+
+.fc .fc-toolbar-title {
+  font-size: 3em;
+  margin-bottom: .3em;
+}
+
+.table-bordered>:not(caption)>*>* {
+  border-width: 0;
+}
+
+.fc td {
+    vertical-align: top;
+    padding: 0;
+    border-top: 1px solid #bacaee;
+    border-left: 1px solid #bacaee;
+}
+
+.fc th {
+  vertical-align: top;
+  padding: 0;
+  border-top: 1px solid #bacaee;
+  border-bottom: 1px solid #bacaee;
+  border-left: 1px solid #bacaee;
+}
+
+.fc .fc-daygrid-day-top {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 4px 8px 0 0;
+}
+
+.fc table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1.03em;
+}
+
+.fc {
+  height: 750px;
+}

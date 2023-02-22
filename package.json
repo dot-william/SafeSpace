@@ -1,0 +1,39 @@
+{
+  "name": "2021t2-g30",
+  "version": "1.0.0",
+  "description": "A diary web application. Wi-Fi is required to run the web application. For the best experience, begin by opening the login.html file.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DLSU-CCAPDEV/2021T2-G30.git"
+  },
+  "author": "Buensalida, Dimaculangan, Rosima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DLSU-CCAPDEV/2021T2-G30/issues"
+  },
+  "homepage": "https://github.com/DLSU-CCAPDEV/2021T2-G30#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^4.4.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.11.1",
+    "gridfs-stream": "^1.1.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.5",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

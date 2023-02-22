@@ -1,0 +1,187 @@
+<section style="height: 100vh">
+    <div
+      class="card shadow top-50 start-50 translate-middle"
+      style="max-width: 30em; border-radius: 15px"
+    >
+      <div class="card-body p-3">
+        
+        <h1 class="text-center"> <i class="fas fa-feather-alt" id="newEntry" title="New Entry"></i> Safe Space </h1>
+        
+        
+        <!-- Grey line -->
+        <hr>
+        <div id="error" style="font-size: 10pt; color: red;">{{errorLogin}}</div>
+        <form action="/login" method="POST" id="loginForm">
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control p-2"
+              id="LoginUsername"
+              placeholder="Username"
+              name="uName";
+            >
+            <!-- Required ^ -->
+          </div>
+          <div class="mb-0">
+            <input
+              type="password"
+              class="form-control p-2"
+              id="LoginPassword"
+              placeholder="Password"
+              name="pw"
+            >
+            <!-- Required ^ -->
+          </div>
+          <div>
+            <p class="mt-1 mb-4" style="font-size: 10pt">
+              Don't have an account?
+              <button
+                type="button"
+                class="btn btn-signup"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+                style="box-shadow: none"
+              >
+                Sign up here!
+              </button>
+               {{#if errorCreds}}
+                <p id="errorCreds" class="h-25" style="font-size: 10pt; margin-top: -2em; color: red;">You entered invalid credentials. Try again</p>
+              {{/if}}
+            </p>
+          </div>
+         
+          <button type="submit" id="loginBtn" class="btn btn-custom mb-1 w-100 mt-0">
+            Log In
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div>
+      <div
+        class="modal fade"
+        id="registerModal"
+        tabindex="-1"
+        aria-labelledby="registerModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" style="border-radius: 15px">
+            <div class="modal-header">
+              <h5 class="modal-title" id="registerModalLabel">Sign up</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="/signup" id="signupform" method="POST" enctype="multipart/form-data">
+                <div class="col">
+                  <div class="mb-3">
+                    <input
+                      type="file"
+                      accept=".jpg, .jpeg, .png"
+                      class="form-control p-2"
+                      id="dPicture"
+                      title="Upload display picture"
+                      name="dPicture"
+                      {{!-- required --}}
+                    >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <div class="mb-0">
+                      <input
+                        type="text"
+                        class="form-control p-2"
+                        id="FirstName"
+                        placeholder="First Name"
+                        name="fName"
+                        required
+                      >
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-0">
+                      <input
+                        type="text"
+                        class="form-control p-2"
+                        id="LastName"
+                        placeholder="Last Name"
+                        name="lName"
+                        required
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <p id="fNameError" class="ps-3 col h-25" style="font-size: 8pt; margin-top: -1.2em; color: red;">{{fNameError}}</p>
+                  <p id="lNameError" class="ps-3 col h-25" style="font-size: 8pt; margin-top: -1.2em; color: red;">{{lNameError}}</p>
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control p-2"
+                    id="email"
+                    placeholder="Email"
+                    name="email"
+                    required
+                  >
+                </div>
+                <p id="emailError" class="ps-1" style="font-size: 8pt; margin-top: -1.2em; color: red;">{{emailError}}</p>
+                <div class="mb-3" style="margin-top: 30px;" id="uNameDiv">
+                  <input
+                    type="text"
+                    class="form-control p-2"
+                    id="uName"
+                    placeholder="Username"
+                    name="uName"
+                    minlength="6"
+                    required
+                  >
+                </div>
+                <p id="uNameError" class="ps-1" style="font-size: 8pt; margin-top: -1.2em; color: red;">{{uNameError}}</p>
+                <div class="mb-3" style="margin-top: 30px;" id="bioDiv">
+                  <textarea
+                    class="form-control"
+                    maxlength="150"
+                    placeholder="Bio (optional)"
+                    aria-label="With textarea"
+                    id="bio"
+                    name="bio"
+                  ></textarea>
+                </div>
+                <div class="mb-0">
+                  <input
+                    type="password"
+                    class="form-control p-2 mb-3"
+                    id="pw"
+                    placeholder="Password"
+                    name="pw"
+                    minlength="8"
+                    
+                    required
+                  >
+                </div>
+                   <p id="pwError" class="ps-1" style="font-size: 8pt; margin-top: -1.2em; color: red;">{{pwError}}</p>
+                <div class="modal-footer">
+                  <button
+                    type="submit" 
+                    class="btn btn-primary"
+                    style="margin-bottom: -0.5rem; margin-right: -0.8rem"
+                    id="submit"
+                    disabled
+                  >
+                    Create Account
+                  </button>
+                </div>
+              </form>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

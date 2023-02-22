@@ -1,0 +1,34 @@
+.img {
+    object-fit: cover;
+    border-radius: 50%; 
+    height: 100px;
+    width: 100px;
+}
+
+.card {
+    border: none;
+}
+
+.card-header {
+    background-color: white;
+}
+
+.entry {
+    border-radius:none;
+}
+
+.custom-section {
+    min-height: calc(100vh - 74px);
+  }
+
+.name-card-body {
+    padding: 1em 1em 0 0;
+}
+
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
